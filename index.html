@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Muli&display=swap" rel="stylesheet">
+    <link href="styleOpenImg.css" rel="stylesheet">
+    <script src='slider.js' defer></script>
+    <script src='animations.js' defer></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" ></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+           $("nav").on("click","a", function (event) {
+               event.preventDefault();
+               var id  = $(this).attr('href'),
+                   top = $(id).offset().top;
+               $('body,html').animate({scrollTop: top}, 800);
+           });
+       });
+    </script>
+    <script src='openImg.js' defer></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="popupMain">
+        <div class="form_wrapper">
+            <div class="form_heading">Отправьте сообщение</div>
+            <form action="sendMail.php" method="post">
+                <input placeholder="Ваше имя" name="name" type="text">   
+                <input placeholder="Ваша почта" name="email" type="email">   
+                <textarea placeholder="Ваше сообщение" name="text" type="text"></textarea>
+                <input type="submit" value="Отправить">
+            </form>
+        </div>
+    </div>
+    <header>
+        <div class="containter">
+            <nav>
+                <a href='#1' class="header_item">
+                    Главная
+                </a>
+                <a href='#2'  class="header_item">
+                    О себе
+                </a>
+                <a href='#3'  class="header_item">
+                    Галерея
+                </a>
+                <a href='#4'  class="header_item">
+                    Услуги
+                </a>
+                <a onclick="showPopup()"  class="header_item">
+                    Связь
+                </a>
+              
+             </nav>
+        </div>
+    </header>
+    <div onclick="showMenu()" class="burger"></div>
+    <section id='1' class="main_section">
+          <div class="containter">
+                <div class="main_section_content">
+                    <h3 class="main_section_content_heading-1">
+                        Визажист и стилист
+                    </h3>
+                    <h1 class="main_section_content_heading-2">
+                        Виктория Третьякова
+                    </h1>
+                    <div class="main_section_content_button">
+                        Записаться 
+                    </div>
+                </div>          
+          </div>
+
+    </section>
+
+    <section id='2' class="about_section">
+        <div class="about_heading">
+            О СЕБЕ
+        </div>
+        <div class="about_section_inner-wrap containter">
+            
+            <div class="about_content">
+                <div class="about_content_left">
+                    <img src="img/about.jpg" alt="">
+                </div>
+                <div class="about_content_right">
+                    Это текст. Нажмите один раз и выберите «Редактировать текст» или просто кликните дважды, чтобы добавить свой текст и настроить шрифт. Вы можете переместить его в любое место на странице. Расскажите посетителям сайта о себе. Здесь будет удачно смотреться текст о вашей компании и услугах 
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id='3' class="gallery_section">
+        <div class="gallery_heading">
+            ГАЛЕРЕЯ
+        </div>
+
+        <div class="slider_wrapper containter">
+            <img src='img/arrw.png' onclick="slidePrev()" class="slider_arrow_prev"></img>
+            <div class="gallery_content">
+                <img src='img/1.png' class="gallery_content_element"/>
+                <img src='img/2.png' class="gallery_content_element"/>
+                <img src='img/3.png' class="gallery_content_element"/>
+                <img src='img/4.png' class="gallery_content_element"/>
+                <img src='img/6.png' class="gallery_content_element"/>
+                <img src='img/1.png' class="gallery_content_element"/>
+            </div>  
+
+             
+            <div class="gallery_content">
+                <img src='img/1.png' class="gallery_content_element"/>
+                <img src='img/2.png' class="gallery_content_element"/>
+                <img src='img/3.png' class="gallery_content_element"/>
+                <img src='img/4.png' class="gallery_content_element"/>
+                <img src='img/6.png' class="gallery_content_element"/>
+                <img src='img/1.png' class="gallery_content_element"/>
+            </div>
+            <img src='img/arrw.png' onclick="slideNext()" class="slider_arrow"></img>
+        </div>
+
+    </section>
+
+    <section id='4' class="service_section">
+        <div class="containter">
+            <div class="service_heading">
+                УСЛУГИ
+            </div>
+            <div class="servive_content">
+                <div class="service_element">
+                    <div class="service_element_name">
+                        Дневной макияж
+                    </div>
+                    <div class="service_element_price">
+                        2500₽
+                    </div>
+                </div>
+
+                <div class="service_element">
+                    <div class="service_element_name">
+                        Вечерний макияж
+                    </div>
+                    <div class="service_element_price">
+                        3500₽
+                    </div>
+                    
+                </div>
+
+                <div class="service_element">
+                    <div class="service_element_name">
+                        Свадебный образ
+                    </div>
+                    <div class="service_element_price">
+                        12000₽
+                    </div>
+                    
+                </div>
+
+                <div class="service_element">
+                    <div class="service_element_name">
+                        Свадебная причёска и макияж с выездом в день торжества
+                    </div>
+                    <div class="service_element_price">
+                        7500₽
+                    </div>
+                    
+                </div>
+                <a href="service.html" class="service_button_more">Подробнее об услугах</a>
+            </div>
+            
+        </div>
+
+    </section>
+
+    <section id='5' class="feedback_section">
+        <div class="containter">
+            <div class="feedback_heading">
+                Связь
+            </div>
+        </div>
+    </section>
+    
+
+</body>
+
+
+
+</html>
