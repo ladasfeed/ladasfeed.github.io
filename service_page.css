@@ -39,14 +39,34 @@ header {
 }    
 
 .service_info_wrap {
-
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
 }
 
+.service_item_descr {
+    width: 80%;
+    font-size: 16px;
+}
+
 .service_item {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     font-size: 20px;
+    color: white;
+}
+
+.service_page-title {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+.info {
+    padding: 20px 30px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 18px;
     color: white;
 }
 

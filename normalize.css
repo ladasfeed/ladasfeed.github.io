@@ -19,6 +19,12 @@
   src: url('fonts/11994.ttf');
 }
 
+@font-face {
+  font-family: 'STS';
+  src: url('fonts/18332.ttf');
+}
+
+
 
 a{
   color: white;
