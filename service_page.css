@@ -3,6 +3,12 @@
     
 }
 
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
 .service_page_content {
     max-width: 1200px;
     margin: 0 auto;

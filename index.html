@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/img/fav.png" type="image/png">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Muli&display=swap" rel="stylesheet">
     <link href="styleOpenImg.css" rel="stylesheet">
+
     <script src='slider.js' defer></script>
     <script src='animations.js' defer></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" ></script>
@@ -22,13 +25,13 @@
     </script>
     <script src='openImg.js' defer></script>
 
-    <title>Document</title>
+    <title>Виктория Третьякова</title>
 </head>
 <body>
     <div class="popupMain">
         <div class="form_wrapper">
             <div class="form_heading">Отправьте сообщение</div>
-            <form action="sendMail.php" method="post">
+            <form id="forms" method="post" action="javascript:void(null);" onsubmit="call()">
                 <input placeholder="Ваше имя" name="name" type="text">   
                 <input placeholder="Ваша почта" name="email" type="email">   
                 <textarea placeholder="Ваше сообщение" name="text" type="text"></textarea>
@@ -218,7 +221,12 @@
     <section id='6' class="feedback_section">
         <div class="containter">
             <div class="feedback_heading">
-                Связь
+                Контакты
+            </div>
+            <div class="feedback_wrapper">
+                <a href="https://instagram.com/__vtretyakova__?igshid=1j69uroimye31"><img src="img/inst.png"/></a>
+                <a href="tel:+79250766989">Телефон:<br/>8 925 076-69-89</a>
+                <a href="mailto:Vtmua@ya.ru">Почта:<br/>Vtmua@ya.ru</a>
             </div>
         </div>
     </section>

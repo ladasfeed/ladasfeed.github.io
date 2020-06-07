@@ -389,6 +389,29 @@ input {
 .partners_text {
     text-align: center;
 }
+
+.feedback_heading {
+    font-size: 29px;
+    padding-bottom: 10px;
+}
+
+.feedback_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.feedback_wrapper a {
+    color: black;
+    text-align: center;
+}
+
+.feedback_wrapper img {
+    max-width: 100px;
+}
+
+
 /*KeyFrames*/
 
 
@@ -577,5 +600,11 @@ input {
 @media screen and (max-width: 530px) { 
     .gallery_content_element {
         max-width: 120px;
+    }
+    .feedback_wrapper {
+        flex-direction: column;
+    }
+    .feedback_wrapper a {
+        margin-bottom: 20px;
     }
 }

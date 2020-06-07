@@ -49,3 +49,20 @@ function slidePrev() {
 
 
 }
+
+function call() {
+    var msg   = $('#forms').serialize();
+    console.log(msg)
+      $.ajax({
+        type: 'POST',
+        url: 'mail.php', // Если обработчик лежит не рядом с формой, то здесь следует указать полный путь до него. Например http://example.com/mail.php
+        data: msg,
+        success: function(data) {
+          $('#results').html(data);
+        },
+        error:  function(xhr, str){
+              alert('Возникла ошибка: ' + xhr.responseCode);
+          }
+      });
+
+  }
