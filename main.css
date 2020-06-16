@@ -11,10 +11,14 @@
 
 .popup {
     font-size: 0px;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
 }
 
 .popup_img {
-    height: 80vh;
+    max-height: 80vh !important;
+    width: auto;
 }
 
 .popupMain {
