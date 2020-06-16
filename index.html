@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,28 +13,31 @@
 
     <script src='slider.js' defer></script>
     <script src='animations.js' defer></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" ></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function(){
-           $("nav").on("click","a", function (event) {
-               event.preventDefault();
-               var id  = $(this).attr('href'),
-                   top = $(id).offset().top;
-               $('body,html').animate({scrollTop: top}, 800);
-           });
-       });
+        $(document).ready(function () {
+            $("nav").on("click", "a", function (event) {
+                event.preventDefault();
+                var id = $(this).attr('href'),
+                    top = $(id).offset().top;
+                $('body,html').animate({
+                    scrollTop: top
+                }, 800);
+            });
+        });
     </script>
     <script src='openImg.js' defer></script>
 
     <title>Виктория Третьякова</title>
 </head>
+
 <body>
     <div class="popupMain">
         <div class="form_wrapper">
             <div class="form_heading">Отправьте сообщение</div>
             <form id="forms" method="post" action="javascript:void(null);" onsubmit="call()">
-                <input placeholder="Ваше имя" name="name" type="text">   
-                <input placeholder="Ваша почта" name="email" type="email">   
+                <input placeholder="Ваше имя" name="name" type="text">
+                <input placeholder="Ваша почта" name="email" type="email">
                 <textarea placeholder="Ваше сообщение" name="text" type="text"></textarea>
                 <input type="submit" value="Отправить">
             </form>
@@ -45,37 +49,37 @@
                 <a href='#1' class="header_item">
                     Главная
                 </a>
-                <a href='#2'  class="header_item">
+                <a href='#2' class="header_item">
                     О себе
                 </a>
-                <a href='#3'  class="header_item">
+                <a href='#3' class="header_item">
                     Галерея
                 </a>
-                <a href='#4'  class="header_item">
+                <a href='#4' class="header_item">
                     Услуги
                 </a>
-                <a onclick="showPopup()"  class="header_item">
+                <a onclick="showPopup()" class="header_item">
                     Связь
                 </a>
-              
-             </nav>
+
+            </nav>
         </div>
     </header>
     <div onclick="showMenu()" class="burger"></div>
     <section id='1' class="main_section">
-          <div class="containter">
-                <div class="main_section_content">
-                    <h3 class="main_section_content_heading-1">
-                        Визажист и стилист
-                    </h3>
-                    <h1 class="main_section_content_heading-2">
-                        Виктория Третьякова
-                    </h1>
-                    <div onclick="showPopup()" class="main_section_content_button">
-                        Записаться 
-                    </div>
-                </div>          
-          </div>
+        <div class="containter">
+            <div class="main_section_content">
+                <h3 class="main_section_content_heading-1">
+                    Визажист и стилист
+                </h3>
+                <h1 class="main_section_content_heading-2">
+                    Виктория Третьякова
+                </h1>
+                <div onclick="showPopup()" class="main_section_content_button">
+                    Записаться
+                </div>
+            </div>
+        </div>
 
     </section>
 
@@ -84,15 +88,19 @@
             О СЕБЕ
         </div>
         <div class="about_section_inner-wrap containter">
-            
+
             <div class="about_content">
-                <div class="about_content_right">
-                    Это текст. Нажмите один раз и выберите «Редактировать текст» или просто кликните дважды, чтобы добавить свой текст и настроить шрифт. Вы можете переместить его в любое место на странице. Расскажите посетителям сайта о себе. Здесь будет удачно смотреться текст о вашей компании и услугах 
-                </div>
+
                 <div class="about_content_left">
                     <img src="img/about.jpg" alt="">
                 </div>
-                
+
+                <div class="about_content_right">
+                    Это текст. Нажмите один раз и выберите «Редактировать текст» или просто кликните дважды, чтобы
+                    добавить свой текст и настроить шрифт. Вы можете переместить его в любое место на странице.
+                    Расскажите посетителям сайта о себе. Здесь будет удачно смотреться текст о вашей компании и услугах
+                </div>
+
             </div>
         </div>
 
@@ -106,22 +114,22 @@
         <div class="slider_wrapper containter">
             <img src='img/arrw.png' onclick="slidePrev()" class="slider_arrow_prev"></img>
             <div class="gallery_content">
-                <img src='img/1.png' class="gallery_content_element"/>
-                <img src='img/2.png' class="gallery_content_element"/>
-                <img src='img/3.png' class="gallery_content_element"/>
-                <img src='img/4.png' class="gallery_content_element"/>
-                <img src='img/6.png' class="gallery_content_element"/>
-                <img src='img/1.png' class="gallery_content_element"/>
-            </div>  
+                <img src='img/slider/1.jpg' class="gallery_content_element" />
+                <img src='img/slider/2.jpg' class="gallery_content_element" />
+                <img src='img/slider/3.jpg' class="gallery_content_element" />
+                <img src='img/slider/4.jpg' class="gallery_content_element" />
+                <img src='img/slider/5.jpg' class="gallery_content_element" />
+                <img src='img/slider/6.jpg' class="gallery_content_element" />
+            </div>
 
-             
+
             <div class="gallery_content">
-                <img src='img/1.png' class="gallery_content_element"/>
-                <img src='img/2.png' class="gallery_content_element"/>
-                <img src='img/3.png' class="gallery_content_element"/>
-                <img src='img/4.png' class="gallery_content_element"/>
-                <img src='img/6.png' class="gallery_content_element"/>
-                <img src='img/1.png' class="gallery_content_element"/>
+                <img src='img/slider/7.jpg' class="gallery_content_element" />
+                <img src='img/slider/8.jpg' class="gallery_content_element" />
+                <img src='img/slider/9.jpg' class="gallery_content_element" />
+                <img src='img/slider/10.jpg' class="gallery_content_element" />
+                <img src='img/slider/11.jpg' class="gallery_content_element" />
+                <img src='img/slider/12.jpg' class="gallery_content_element" />
             </div>
             <img src='img/arrw.png' onclick="slideNext()" class="slider_arrow"></img>
         </div>
@@ -130,41 +138,44 @@
 
     <section id='4' class="partners_section">
         <div class="containter">
-        <div class="gallery_heading">
-            Партнёры
-        </div>
-        <div class="partners_wrapper">
-            <a href="https://instagram.com/grandimage.ru?igshid=bwmqoukqvvbu" target="blank" class="parnters_item">
-                <div style="background-image: url('img/1.jpg');" class="partners_img"></div>
-                <div class="partners_text">GrandImage</div>
-            </a>
-      
+            <div class="gallery_heading">
+                Партнёры
+            </div>
+            <div class="partners_wrapper">
+                <a href="https://instagram.com/grandimage.ru?igshid=bwmqoukqvvbu" target="blank" class="parnters_item">
+                    <div style="background-image: url('img/1.jpg');" class="partners_img"></div>
+                    <div class="partners_text">GrandImage</div>
+                </a>
 
-       
-            <a href="https://instagram.com/foto_elite?igshid=1ej2ch93c0cun" target="blank" class="parnters_item">
-                <div style="background-image: url('img/2.jpg'); border-radius: 0; background-position: center;" class="partners_img"></div>
-                <div class="partners_text">Foto<br/> Elite Studio</div>
-            </a>
-       
 
-  
-            <a href="https://instagram.com/serdigger?igshid=1kctp78nufh3g" target="blank" class="parnters_item">
-                <div style="background-image: url('img/3.jpg');" class="partners_img"></div>
-                <div class="partners_text">Фотограф<br/> Сергей Сергеевич</div>
-            </a>
-     
 
-            <a href="https://instagram.com/dilyaraphoto?igshid=gkrywjbycgwy" target="blank" class="parnters_item">
-                <div style="background-image: url('img/4.jpg');" class="partners_img"></div>
-                <div class="partners_text">Фотограф<br/> Диляра Латыфуллина</div>
-            </a>
-      
+                <a href="https://instagram.com/foto_elite?igshid=1ej2ch93c0cun" target="blank" class="parnters_item">
+                    <div style="background-image: url('img/2.jpg'); border-radius: 0; background-position: center;"
+                        class="partners_img"></div>
+                    <div class="partners_text">Foto<br /> Elite Studio</div>
+                </a>
 
-            <a href="https://instagram.com/souffle_conditer?igshid=vkm5tyaoegy2" target="blank" class="parnters_item">
-                <div style="background-image: url('img/5.jpg'); background-position: center; background-size: cover;" class="partners_img"></div>
-                <div class="partners_text">Souffle</div>
-            </a>
-        </div>
+
+
+                <a href="https://instagram.com/serdigger?igshid=1kctp78nufh3g" target="blank" class="parnters_item">
+                    <div style="background-image: url('img/3.jpg');" class="partners_img"></div>
+                    <div class="partners_text">Фотограф<br /> Сергей Сергеевич</div>
+                </a>
+
+
+                <a href="https://instagram.com/dilyaraphoto?igshid=gkrywjbycgwy" target="blank" class="parnters_item">
+                    <div style="background-image: url('img/4.jpg');" class="partners_img"></div>
+                    <div class="partners_text">Фотограф<br /> Диляра Латыфуллина</div>
+                </a>
+
+
+                <a href="https://instagram.com/souffle_conditer?igshid=vkm5tyaoegy2" target="blank"
+                    class="parnters_item">
+                    <div style="background-image: url('img/5.jpg'); background-position: center; background-size: cover;"
+                        class="partners_img"></div>
+                    <div class="partners_text">Souffle</div>
+                </a>
+            </div>
     </section>
 
     <section id='5' class="service_section">
@@ -189,7 +200,7 @@
                     <div class="service_element_price">
                         3500₽
                     </div>
-                    
+
                 </div>
 
                 <div class="service_element">
@@ -199,7 +210,7 @@
                     <div class="service_element_price">
                         12000₽
                     </div>
-                    
+
                 </div>
 
                 <div class="service_element">
@@ -209,13 +220,13 @@
                     <div class="service_element_price">
                         7500₽
                     </div>
-                    
+
                 </div>
-                <a href="service.html" class="service_button_more">Подробнее об услугах</a>
+                <a href="service.html" class="service_button_more">Прайс</a>
             </div>
-            
+
         </div>
-     </div>
+        </div>
     </section>
 
     <section id='6' class="feedback_section">
@@ -224,13 +235,13 @@
                 Контакты
             </div>
             <div class="feedback_wrapper">
-                <a href="https://instagram.com/__vtretyakova__?igshid=1j69uroimye31"><img src="img/inst.png"/></a>
-                <a href="tel:+79250766989">Телефон:<br/>8 925 076-69-89</a>
-                <a href="mailto:Vtmua@ya.ru">Почта:<br/>Vtmua@ya.ru</a>
+                <a href="https://instagram.com/__vtretyakova__?igshid=1j69uroimye31"><img src="img/inst.png" /></a>
+                <a href="tel:+79250766989">Телефон:<br />8 925 076-69-89</a>
+                <a href="mailto:Vtmua@ya.ru">Почта:<br />Vtmua@ya.ru</a>
             </div>
         </div>
     </section>
-    
+
 
 </body>
 
